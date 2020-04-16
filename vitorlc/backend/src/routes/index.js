@@ -6,7 +6,6 @@ const loteController = require('../controllers/loteController')
 
 const routes = Router()
 
-
 // ------------- Pessoa -------------
 routes.get('/pessoa', pessoaController.findAll)
 
@@ -16,7 +15,7 @@ routes.post('/pessoa', pessoaController.create)
 
 routes.put('/pessoa/:id', pessoaController.update)
 
-router.delete('/pessoa/:id', pessoaController.delete)
+routes.delete('/pessoa/:id', pessoaController.remove)
 
 // ------------- Animal -------------
 
@@ -28,7 +27,7 @@ routes.post('/animal', animalController.create)
 
 routes.put('/animal/:id', animalController.update)
 
-router.delete('/animal/:id', animalController.delete)
+routes.delete('/animal/:id', animalController.remove)
 
 
 // ------------- Lote -------------
@@ -41,4 +40,7 @@ routes.post('/lote', loteController.create)
 
 routes.put('/lote/:id', loteController.update)
 
-router.delete('/lote/:id', loteController.delete)
+routes.delete('/lote/:id', loteController.remove)
+
+
+module.exports = routes
