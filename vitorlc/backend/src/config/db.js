@@ -5,4 +5,7 @@ module.exports = {
     database: 'desafio_irancho',
     host: '127.0.0.1',
     dialect: 'mysql',
+    define: {
+        timestamps: false
+    }
 }
