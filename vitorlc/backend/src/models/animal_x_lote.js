@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('animal_x_lote', {
+  const AnimalLote = sequelize.define('animal_x_lote', {
     fk_id_animal: {
       type: DataTypes.INTEGER(6),
       allowNull: false,
@@ -29,4 +29,5 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     tableName: 'animal_x_lote'
   });
+  return AnimalLote
 };
