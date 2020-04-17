@@ -48,7 +48,7 @@ module.exports = {
             console.log(req.params)
             let pessoa = await Pessoa.findByPk(req.params.id)
             await pessoa.destroy()
-            return res.status(200).send(pessoa)
+            return res.status(200).send()
         } catch (e) {
             console.log(e)
             return res.status(500).send({error: true, msg:"Não foi possível remover pessoa"})
